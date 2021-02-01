@@ -7,15 +7,15 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, last, j;
+	size_t i = 0, last = size - 1, j = 1;
 	int temp, flag = 0;
 
 	if (array == NULL)
 		return;
 
-	for (last = size - 1; last > 0; last--)
+	while (last > 0)
 	{
-		for (i = 0, j = 1; j <= last; i++, j++)
+		while (j <= last)
 		{
 			if (array[j] < array[i])
 			{
@@ -25,9 +25,14 @@ void bubble_sort(int *array, size_t size)
 				print_array(array, size);
 				flag = 1;
 			}
+			i++;
+			j++;
 		}
 		if (flag == 0)
 			return;
 		flag = 0;
+		last--;
+		i = 0;
+		j = 1;
 	}
 }
