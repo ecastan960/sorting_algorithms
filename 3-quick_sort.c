@@ -78,7 +78,7 @@ void quick_sort(int *array, size_t size)
 {
 	int min = 0, last = size - 1, pivot;
 
-	if (array == NULL || size < 2)
+	if (array == NULL || size < 2 || last < min)
 		return;
 
 	if (min < last)
