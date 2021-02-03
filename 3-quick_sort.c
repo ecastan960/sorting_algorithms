@@ -78,6 +78,9 @@ void quick_sort(int *array, size_t size)
 {
 	int min = 0, last = size - 1, pivot;
 
+	if (array == NULL)
+		return;
+
 	if (min < last)
 	{
 		pivot = partition(array, min, last, size);
