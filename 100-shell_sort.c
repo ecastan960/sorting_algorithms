@@ -56,7 +56,7 @@ void shell_sort(int *array, size_t size)
 	}
 	gap = 1;
 	for (k = 0; k < count - 1; k++)
-		gap = gap * (3 + 1);
+		gap = (gap * 3) + 1;
 	while (flag == 0)
 	{
 		j = gap + i;
