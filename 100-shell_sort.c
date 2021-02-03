@@ -31,7 +31,7 @@ int New_gap(int gap, int count)
 	{
 		gap = 1;
 		for (k = 0; k < count - 1; k++)
-			gap = gap * (3 + 1);
+			gap = (gap * 3) + 1;
 	}
 	return (gap);
 }
@@ -78,7 +78,7 @@ void shell_sort(int *array, size_t size)
 		print_array(array, size);
 		if (gap == 1)
 			flag = 1;
-		gap = New_gap(gap, count);
+		gap = New_gap(gap, count - 1);
 		if (gap >= 4)
 			count--;
 	}
